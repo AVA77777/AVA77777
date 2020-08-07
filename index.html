@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--  https://startbootstrap.com/snippets/full-slider
+    https://unsplash.com/@joannakosinska 
+  https://unsplash.com-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.8.2/css/all.css"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <title>AVA website</title>
+  <link rel="stylesheet" href="mystyles.css">
+  <script src="myScript.js"></script>
+</head>
+
+<style>
+
+
+</style>
+
+<body>
+
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark scrolling-navbar bg-dark fixed-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"><a class="nav-link text-light" href="#myPage">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-light" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link text-light" href="contact.html">Contact</a></li>
+
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle text-light" id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+          <div class="dropdown-menu dropdown-menu-right animate slideIn bg-dark" aria-labelledby="navbarDropdown">
+            <a class="ser dropdown-item text-light" href="">Linux</a>
+            <a class="ser dropdown-item text-light" href="">DNS Management</a>
+            <a class="ser dropdown-item text-light" href="">Construction</a>
+            <div class="dropdown-divider"></div>
+            <a target="blank" class="ser dropdown-item text-light" href="#">My works</a>
+
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-70px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+  </script>
+
+  <header id="myPage" class="mt-4">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="2000">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active"
+          style="background-image: url('https://images.unsplash.com/photo-1582589205863-cb86a47c9688?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80')">
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="display-4">First Slide</h2>
+            <p class="lead">This is a description for the first slide.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item"
+          style="background-image: url('https://images.unsplash.com/photo-1594612129911-d6903495cfe4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')">
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="display-4">Second Slide</h2>
+            <p class="lead">This is a description for the second slide.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item"
+          style="background-image: url('https://images.unsplash.com/photo-1582056615449-5dcb2332b3b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')">
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="display-4 text-dark">Third Slide</h2>
+            <p class="lead text-dark">This is a description for the third slide.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item"
+          style="background-image: url('https://images.unsplash.com/photo-1513949145697-7a3b42cb9f21?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')">
+
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="display-4">Forth Slide</h2>
+            <p class="lead">This is a description for the Forth slide.</p>
+          </div>
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </header>
+
+
+
+
+
+
+  <canvas class="mx-auto d-block rounded-circle" id="canvas" width="200" height="200">
+  </canvas>
+  <script>
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    var radius = canvas.height / 2;
+    ctx.translate(radius, radius);
+    radius = radius * 0.90
+    setInterval(drawClock, 1000);
+
+    function drawClock() {
+      drawFace(ctx, radius);
+      drawNumbers(ctx, radius);
+      drawTime(ctx, radius);
+    }
+
+    function drawFace(ctx, radius) {
+      var grad;
+      ctx.beginPath();
+      ctx.arc(0, 0, radius, 0, 2 * Math.PI);
+      ctx.fillStyle = 'white';
+      ctx.fill();
+      grad = ctx.createRadialGradient(0, 0, radius * 0.95, 0, 0, radius * 1.05);
+      grad.addColorStop(0, '#333');
+      grad.addColorStop(0.5, 'white');
+      grad.addColorStop(1, '#333');
+      ctx.strokeStyle = grad;
+      ctx.lineWidth = radius * 0.1;
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.arc(0, 0, radius * 0.1, 0, 2 * Math.PI);
+      ctx.fillStyle = '#333';
+      ctx.fill();
+    }
+
+    function drawNumbers(ctx, radius) {
+      var ang;
+      var num;
+      ctx.font = radius * 0.15 + "px arial";
+      ctx.textBaseline = "middle";
+      ctx.textAlign = "center";
+      for (num = 1; num < 13; num++) {
+        ang = num * Math.PI / 6;
+        ctx.rotate(ang);
+        ctx.translate(0, -radius * 0.85);
+        ctx.rotate(-ang);
+        ctx.fillText(num.toString(), 0, 0);
+        ctx.rotate(ang);
+        ctx.translate(0, radius * 0.85);
+        ctx.rotate(-ang);
+      }
+    }
+
+    function drawTime(ctx, radius) {
+      var now = new Date();
+      var hour = now.getHours();
+      var minute = now.getMinutes();
+      var second = now.getSeconds();
+      //hour
+      hour = hour % 12;
+      hour = (hour * Math.PI / 6) +
+        (minute * Math.PI / (6 * 60)) +
+        (second * Math.PI / (360 * 60));
+      drawHand(ctx, hour, radius * 0.5, radius * 0.07);
+      //minute
+      minute = (minute * Math.PI / 30) + (second * Math.PI / (30 * 60));
+      drawHand(ctx, minute, radius * 0.8, radius * 0.07);
+      // second
+      second = (second * Math.PI / 30);
+      drawHand(ctx, second, radius * 0.9, radius * 0.02);
+    }
+
+    function drawHand(ctx, pos, length, width) {
+      ctx.beginPath();
+      ctx.lineWidth = width;
+      ctx.lineCap = "round";
+      ctx.moveTo(0, 0);
+      ctx.rotate(pos);
+      ctx.lineTo(0, -length);
+      ctx.stroke();
+      ctx.rotate(-pos);
+    }
+
+
+  </script>
+  <div id="root" class="text-center text-light"></div>
+
+  <script type="text/babel">
+    function tick() {
+      const element = (<h1>{new Date().toLocaleTimeString()}</h1>);
+      ReactDOM.render(element, document.getElementById('root'));
+    }
+
+    setInterval(tick, 1000);
+  </script>
+
+  <section id="Services" class="pricing py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="card mb-5 mb-lg-0">
+            <div class="card-body">
+              <h5 class="card-title text-muted text-uppercase text-center">Linux</h5>
+              <h6 class="card-price text-center">&#1423;4400<span class="period">/month</span></h6>
+              <hr>
+              <ul class="fa-ul">
+                <li><span class="fa-li"></span><i class="fas fa-check"></i></span>Տրամադրվող տարածք - 15000 MB</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Էլ. հասցեներ - &#8734;</li>
+                <li><span class="fa-li"><i class="fas fa-times"></i></span> Թողունակություն - &#8734;</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>ՏԲ-ներ - &#8734;</li>
+              </ul>
+              <a href="#" class="btn btn-block btn-dark text-uppercase">Buy</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card mb-5 mb-lg-0">
+            <div class="card-body">
+              <h5 class="card-title text-muted text-uppercase text-center">Dns Management</h5>
+              <h6 class="card-price text-center">&#1423;420<span class="period">/month</span></h6>
+              <hr>
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fas fa-check"></i></span> DNS գրառումների փոփոխման համար նախատեսված
+                  փաթեթ։</li>
+              </ul>
+              <a href="#" class="btn btn-block btn-dark text-uppercase">Buy now</a>
+            </div>
+          </div>
+        </div>
+        <!-- Pro Tier -->
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-muted text-uppercase text-center">Construction</h5>
+              <h6 class="card-price text-center">&#1423;1700<span class="period">/month</span></h6>
+              <hr>
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Տրամադրվող տարածք - &#8734;</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Էլ․ հասցեներ - &#8734;</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Էջերի քանակ - &#8734;</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>ՏՏԼ սերտիֆիկատ - ✓</li>
+              </ul>
+              <a href="#" class="btn btn-block btn-dark text-uppercase">Buy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <div class="container mt-3">
+  <div class="embed-responsive embed-responsive-21by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=eXTJVsyYYTM"></iframe>
+</div>
+</div> -->
+</body>
+
+</html>
